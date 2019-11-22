@@ -12,3 +12,6 @@ https://greasyfork.org/en/scripts/13809-mh-auto-kr-solver
 
 script should be able to autoupdate.
 I have already tested once from v1.0.0 to v1.0.1
+
+Updates I will do
+I will only update new weapons, base, charms and rift algorithm variables to include newer rift traps
