@@ -4900,11 +4900,11 @@ function embedTimer(targetPage) {
             var titleElement = document.createElement('div');
             titleElement.setAttribute('id', 'titleElement');
             if (targetPage && aggressiveMode)
-                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition)</b></a> - <font color='red'>Aggressive Mode</font>";
+                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition Genes Custom)</b></a> - <font color='red'>Aggressive Mode</font>";
             else if (targetPage && browser != 'chrome' && browser != 'opera')
-                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition)</b></a> - <font color='red'><b>Pls use Chrome browser for fully working features</b></font>";
+                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition Genes Custom)</b></a> - <font color='red'><b>Pls use Chrome browser for fully working features</b></font>";
             else
-                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition)</b></a>";
+                titleElement.innerHTML = "<a href=\"http://devcnn.wordpress.com\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Enhanced Edition Genes Custom)</b></a>";
             timerDivElement.appendChild(titleElement);
             titleElement = null;
 
