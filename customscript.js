@@ -5636,7 +5636,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectBWRiftBase" style="width: 75px;" onchange="saveBWRift();">';
             preferenceHTMLStr += '<option value="Prestige Base">Prestige</option>';
@@ -5700,7 +5700,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectBWRiftBaseSpecial" style="width: 75px;" onchange="saveBWRift();">';
             preferenceHTMLStr += '<option value="MASTER">Master</option>';
@@ -5934,7 +5934,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectWWRiftTrapBase" style="width: 75px" onchange="saveWWRift();">';
             preferenceHTMLStr += '</select>';
@@ -5992,7 +5992,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectWWRiftMBWTrapBase" style="width: 75px" onchange="saveWWRift();">';
             preferenceHTMLStr += '</select>';
@@ -6050,7 +6050,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectFRTrapBase" onchange="saveFR();">';
             preferenceHTMLStr += '<option value="Prestige Base">Prestige</option>';
@@ -6800,7 +6800,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Crystal Tower">CT</option>';
             preferenceHTMLStr += '<option value="Christmas Crystalabra Trap">XmasCry</option>';
             preferenceHTMLStr += '<option value="Wacky Inflatable Party People Trap">wacky</option>';
-            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacial Gatler</option>';
+            preferenceHTMLStr += '<option value="Rift Glacier Gatler">Glacier Gatler</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectBRTrapBase" style="width: 75px" onchange="saveBR();">';
             preferenceHTMLStr += '</select>';
