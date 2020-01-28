@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.0.7 - 290120
+Emergencry patch to allow minimal functionality.<br/>
+Show Preferences and algorithms does not work<br/>
+Allow horn to sound even without cheese
+
 ## v1.0.6 - 150120
 New Base
 ```diff

@@ -18,3 +18,9 @@ I have already tested once from v1.0.0 to v1.0.1
 
 - Updates I will do<br/>
 I will only update new weapons, base, charms and rift algorithm variables to include newer rift traps
+
+
+## ANNOUNCEMENT
+Due to mousehunt's series of patches on 290120, the script no longer works properly.<br/>
+A quick patchwork has been made to enable minimal functionality.<br/>
+Refer to change log v1.0.7 for details.<br/>

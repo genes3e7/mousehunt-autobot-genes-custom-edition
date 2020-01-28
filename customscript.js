@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.6
+// @version    	1.0.7
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -4658,14 +4658,14 @@ function action() {
         displayKingRewardSumTime(null);
         // pause script
     }
-    else if (g_nBaitQuantity === 0) {
+    /*else if (g_nBaitQuantity === 0) {
         // update timer
         displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
         displayLocation(huntLocation);
         displayKingRewardSumTime(null);
 
         // pause the script
-    }
+    }*/
     else {
         // update location
         displayLocation(huntLocation);
@@ -4758,23 +4758,23 @@ function countdownTimer() {
             if (hornTime <= 0) {
                 // blow the horn!
                 hornTime = 0;
-                if (getBaitQuantity() > 0)
+                //if (getBaitQuantity() > 0)
                     soundHorn();
-                else {
-                    displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
-                    displayLocation(huntLocation);
-                    displayKingRewardSumTime(null);
-                }
+                //else {
+                    //displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
+                    //displayLocation(huntLocation);
+                    //displayKingRewardSumTime(null);
+                //}
             }
             else if (enableTrapCheck && checkTime <= 0) {
                 // trap check!
-                if (getBaitQuantity() > 0)
+                //if (getBaitQuantity() > 0)
                     trapCheck();
-                else {
-                    displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
-                    displayLocation(huntLocation);
-                    displayKingRewardSumTime(null);
-                }
+                //else {
+                    //displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
+                    //displayLocation(huntLocation);
+                    //displayKingRewardSumTime(null);
+                //}
             }
             else {
                 if (enableTrapCheck) {
