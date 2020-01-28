@@ -7,7 +7,7 @@
 `https://raw.githubusercontent.com/genes3e7/mousehunt-autobot-genes-custom-edition/master/customscript.js`
 3. Press import
 
-## dependencies
+## Dependencies
 [MH Auto KR Solver](https://greasyfork.org/en/scripts/13809-mh-auto-kr-solver)
 
 ## Other details
