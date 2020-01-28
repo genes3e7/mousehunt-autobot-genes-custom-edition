@@ -8,7 +8,7 @@
 3. Press import
 
 ## Dependencies
-[MH Auto KR Solver](https://greasyfork.org/en/scripts/13809-mh-auto-kr-solver)
+[MH Auto KR Solver](https://greasyfork.org/en/scripts/13809-mh-auto-kr-solver) - Required for automatic solving of King's Reward
 
 ## Other details
 - Change Log: [Here](./changelog.md)
