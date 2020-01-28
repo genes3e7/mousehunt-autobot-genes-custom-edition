@@ -11,8 +11,7 @@
 [MH Auto KR Solver](https://greasyfork.org/en/scripts/13809-mh-auto-kr-solver)
 
 ## Other details
-- Change Log<br/>
-[Here](./changelog.md)
+- Change Log: [Here](./changelog.md)
 
 - Script should be able to autoupdate.<br/>
 I have already tested once from v1.0.0 to v1.0.1
