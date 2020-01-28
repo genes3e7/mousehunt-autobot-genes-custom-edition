@@ -1,5 +1,5 @@
 # mousehunt autobot genes custom edition
-- custom script based off mousehunt autobot enhanced edition 1.37.9
+- custom script based off [mousehunt autobot enhanced edition 1.37.9](https://greasyfork.org/en/scripts/5705-mousehunt-autobot-enhanced-edition?version=214422)
 
 ## To install
 1. open tampermonkey dashboard > utilities
