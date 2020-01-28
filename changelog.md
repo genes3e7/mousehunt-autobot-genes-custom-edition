@@ -1,7 +1,7 @@
 # Change Log
 
 ## v1.0.7 - 290120
-Emergencry patch to allow minimal functionality.<br/>
+Emergency patch to allow minimal functionality.<br/>
 Show Preferences and algorithms does not work<br/>
 Allow horn to sound even without cheese
 
