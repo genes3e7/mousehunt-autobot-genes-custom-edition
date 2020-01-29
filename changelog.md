@@ -1,9 +1,14 @@
 # Change Log
 
+## v1.0.8 - 290120
+modify base function getBaitQuantity() to solve bait check problem
+Full credits to [MirrorCubeSquare](https://github.com/MirrorCubeSquare)
+
 ## v1.0.7 - 290120
 Emergency patch to allow minimal functionality.<br/>
 Show Preferences and algorithms does not work<br/>
-Allow horn to sound even without cheese
+Allow horn to sound even without cheese<br/>
+Added Changelog.
 
 ## v1.0.6 - 150120
 New Base
@@ -56,5 +61,5 @@ Testing automatic updating feature
 changed Enhanced Edition to Enchanced Edition Genes Custom<br/>
 Testing automatic updating feature
 
-## v1.0.2 - 221119
+## v1.0.0 - 221119
 Initial Commit
