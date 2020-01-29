@@ -1,7 +1,12 @@
 # Change Log
 
+## v1.0.9 - 290120
+user.location => user.environment_name<br/>
+all location-specific scripts should now work properly<br/>
+Full credits to [MirrorCubeSquare](https://github.com/MirrorCubeSquare)
+
 ## v1.0.8 - 290120
-modify base function getBaitQuantity() to solve bait check problem
+modify base function getBaitQuantity() to solve bait check problem<br/>
 Full credits to [MirrorCubeSquare](https://github.com/MirrorCubeSquare)
 
 ## v1.0.7 - 290120
