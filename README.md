@@ -3,6 +3,9 @@ Due to mousehunt's series of patches on 290120, the script no longer works prope
 A quick patchwork has been made to enable minimal functionality.<br/>
 Refer to change log v1.0.7 for details.<br/>
 
+DO NOTE:<br/>
+Do not run out of cheese as the bot may go into an infinite loop for sounding the horn which will definitely get u banned.
+
 # mousehunt autobot genes custom edition
 - custom script based off [mousehunt autobot enhanced edition 1.37.9](https://greasyfork.org/en/scripts/5705-mousehunt-autobot-enhanced-edition?version=214422)
 
