@@ -4518,9 +4518,10 @@ function getKingRewardStatus() {
 }
 
 function getBaitQuantity() {
-    var hudBaitQuantity = document.getElementById('hud_baitQuantity');
+    //var hudBaitQuantity = document.getElementById('hud_baitQuantity');
+	var hudBaitQuantity=getPageVariable('user.bait_quantity');
     if (hudBaitQuantity !== null) {
-        return parseInt(hudBaitQuantity.textContent);
+        return hudBaitQuantity;
     }
     else {
         return 0;
@@ -4658,14 +4659,14 @@ function action() {
         displayKingRewardSumTime(null);
         // pause script
     }
-    /*else if (g_nBaitQuantity === 0) {
+    else if (g_nBaitQuantity === 0) {
         // update timer
         displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
         displayLocation(huntLocation);
         displayKingRewardSumTime(null);
 
         // pause the script
-    }*/
+    }
     else {
         // update location
         displayLocation(huntLocation);
@@ -4758,23 +4759,23 @@ function countdownTimer() {
             if (hornTime <= 0) {
                 // blow the horn!
                 hornTime = 0;
-                //if (getBaitQuantity() > 0)
+                if (getBaitQuantity() > 0)
                     soundHorn();
-                //else {
-                    //displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
-                    //displayLocation(huntLocation);
-                    //displayKingRewardSumTime(null);
-                //}
+                else {
+                    displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
+                    displayLocation(huntLocation);
+                    displayKingRewardSumTime(null);
+                }
             }
             else if (enableTrapCheck && checkTime <= 0) {
                 // trap check!
-                //if (getBaitQuantity() > 0)
+                if (getBaitQuantity() > 0)
                     trapCheck();
-                //else {
-                    //displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
-                    //displayLocation(huntLocation);
-                    //displayKingRewardSumTime(null);
-                //}
+                else {
+                    displayTimer("No more cheese!", "Cannot hunt without the cheese...", "Cannot hunt without the cheese...");
+                    displayLocation(huntLocation);
+                    displayKingRewardSumTime(null);
+                }
             }
             else {
                 if (enableTrapCheck) {
