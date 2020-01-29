@@ -1188,7 +1188,7 @@ function checkCaughtMouse(obj, arrUpdatedUncaught) {
 }
 
 function GetCurrentLocation() {
-    var loc = getPageVariable('user.location');
+    var loc = getPageVariable('user.environment_name');
     console.plog('Current Location:', loc);
     return loc;
 }
@@ -9447,7 +9447,7 @@ function bodyJS() {
         }
 
         storageValue = JSON.parse(storageValue);
-        if (bAutoChangeZone && !isNullOrUndefined(user) && user.location.indexOf('Sunken City') > -1) {
+        if (bAutoChangeZone && !isNullOrUndefined(user) && user.environment_name.indexOf('Sunken City') > -1) {
             var zone = document.getElementsByClassName('zoneName')[0].innerText;
             var objZone = {
                 'ZONE_TREASURE': ['Sand Dollar Sea Bar', 'Pearl Patch', 'Sunken Treasure'],
@@ -9737,20 +9737,20 @@ function bodyJS() {
         else {
             storageValue = JSON.parse(storageValue);
             if (bAutoChangeLocation && !isNullOrUndefined(user)) {
-                if (user.location.indexOf('Living Garden') > -1) {
+                if (user.environment_name.indexOf('Living Garden') > -1) {
                     selectLGTGAutoFillSide.value = 'LG';
                     selectLGTGAutoPourSide.value = 'LG';
                     selectLGTGSide.value = 'LG';
                 }
-                else if (user.location.indexOf('Twisted Garden') > -1) {
+                else if (user.environment_name.indexOf('Twisted Garden') > -1) {
                     selectLGTGAutoFillSide.value = 'TG';
                     selectLGTGAutoPourSide.value = 'TG';
                     selectLGTGSide.value = 'TG';
                 }
-                else if (user.location.indexOf('Lost City') > -1) {
+                else if (user.environment_name.indexOf('Lost City') > -1) {
                     selectLCCCSide.value = 'LC';
                 }
-                else if (user.location.indexOf('Cursed City') > -1) {
+                else if (user.environment_name.indexOf('Cursed City') > -1) {
                     selectLCCCSide.value = 'CC';
                 }
             }
@@ -9805,7 +9805,7 @@ function bodyJS() {
         }
         else {
             storageValue = JSON.parse(storageValue);
-            if (bAutoChangeWave && !isNullOrUndefined(user) && user.location.indexOf('Fiery Warpath') > -1) {
+            if (bAutoChangeWave && !isNullOrUndefined(user) && user.environment_name.indexOf('Fiery Warpath') > -1) {
                 if (user.viewing_atts.desert_warpath.wave < 1)
                     selectFWWave.value = 1;
                 else if (user.viewing_atts.desert_warpath.wave > 4)
@@ -10099,7 +10099,7 @@ function bodyJS() {
         }
         else {
             storageValue = JSON.parse(storageValue);
-            if (bAutoChangeSeason && !isNullOrUndefined(user) && user.location.indexOf('Seasonal Garden') > -1) {
+            if (bAutoChangeSeason && !isNullOrUndefined(user) && user.environment_name.indexOf('Seasonal Garden') > -1) {
                 var arrSeason = ['Spring', 'Summer', 'Fall', 'Winter'];
                 var nTimeStamp = Date.parse(new Date()) / 1000;
                 var nFirstSeasonTimeStamp = 1283328000;
@@ -10139,7 +10139,7 @@ function bodyJS() {
         else {
             storageValue = JSON.parse(storageValue);
             selectZTFocus.value = storageValue.focus.toUpperCase();
-            if (bAutoChangeMouseOrder && !isNullOrUndefined(user) && user.location.indexOf('Zugzwang\'s Tower') > -1) {
+            if (bAutoChangeMouseOrder && !isNullOrUndefined(user) && user.environment_name.indexOf('Zugzwang\'s Tower') > -1) {
                 var nProgressMystic = parseInt(user.viewing_atts.zzt_mage_progress);
                 var nProgressTechnic = parseInt(user.viewing_atts.zzt_tech_progress);
                 if (Number.isNaN(nProgressMystic) || Number.isNaN(nProgressTechnic)) {
@@ -10328,7 +10328,7 @@ function bodyJS() {
         else {
             storageValue = JSON.parse(storageValue);
             var nIndex = 0;
-            if (bAutoChangeBatteryLevel && !isNullOrUndefined(user) && user.location.indexOf('Furoma Rift') > -1 && (user.quests.QuestRiftFuroma.view_state == 'pagoda' || user.quests.QuestRiftFuroma.view_state == 'pagoda knows_all')) {
+            if (bAutoChangeBatteryLevel && !isNullOrUndefined(user) && user.environment_name.indexOf('Furoma Rift') > -1 && (user.quests.QuestRiftFuroma.view_state == 'pagoda' || user.quests.QuestRiftFuroma.view_state == 'pagoda knows_all')) {
                 var classCharge = document.getElementsByClassName('riftFuromaHUD-droid-charge');
                 if (classCharge.length > 0) {
                     var nRemainingEnergy = parseInt(classCharge[0].innerText.replace(/,/g, ''));
@@ -10401,7 +10401,7 @@ function bodyJS() {
             var nIndex = -1;
             var arrOrder = ['GENERAL', 'TREACHEROUS', 'BRUTAL', 'BOMBING', 'MAD', 'ICEWING', 'HIDDEN', 'DEEP', 'SLUSHY'];
             if (bAutoChangePhase && !isNullOrUndefined(user)) {
-                if (user.location.indexOf('Iceberg') > -1) {
+                if (user.environment_name.indexOf('Iceberg') > -1) {
                     var classCurrentPhase = document.getElementsByClassName('currentPhase');
                     var phase = (classCurrentPhase.length > 0) ? classCurrentPhase[0].textContent : user.quests.QuestIceberg.current_phase;
                     var classProgress = document.getElementsByClassName('user_progress');
@@ -10418,7 +10418,7 @@ function bodyJS() {
                         }
                     }
                 }
-                else if (user.location.indexOf('Slushy Shoreline') > -1)
+                else if (user.environment_name.indexOf('Slushy Shoreline') > -1)
                     selectIcebergPhase.value = 'SLUSHY';
             }
             nIndex = arrOrder.indexOf(selectIcebergPhase.value);
@@ -10460,7 +10460,7 @@ function bodyJS() {
         storageValue = JSON.parse(storageValue);
         var nIndex = -1;
         if (bAutoChangeSublocation && !isNullOrUndefined(user))
-            selectFGARSublocation.value = (user.location.indexOf('Acolyte Realm') > -1) ? 'AR' : 'FG';
+            selectFGARSublocation.value = (user.environment_name.indexOf('Acolyte Realm') > -1) ? 'AR' : 'FG';
         nIndex = storageValue.order.indexOf(selectFGARSublocation.value);
         selectFGARWeapon.value = storageValue.weapon[nIndex];
         selectFGARBase.value = storageValue.base[nIndex];
@@ -10500,7 +10500,7 @@ function bodyJS() {
         storageValue = JSON.parse(storageValue);
         var nIndex = -1;
         if (bAutoChangeSublocation && !isNullOrUndefined(user))
-            selectBCJODSublocation.value = (user.location.indexOf('Balack\'s Cove') > -1) ? 'LOW' : 'JOD';
+            selectBCJODSublocation.value = (user.environment_name.indexOf('Balack\'s Cove') > -1) ? 'LOW' : 'JOD';
         nIndex = storageValue.order.indexOf(selectBCJODSublocation.value);
         selectBCJODWeapon.value = storageValue.weapon[nIndex];
         selectBCJODBase.value = storageValue.base[nIndex];
@@ -10689,7 +10689,7 @@ function bodyJS() {
         storageValue = JSON.parse(storageValue);
         var nIndex = -1;
         var bCursed = false;
-        if (bAutoChangeChamber && !isNullOrUndefined(user) && user.location.indexOf('Bristle Woods Rift') > -1) {
+        if (bAutoChangeChamber && !isNullOrUndefined(user) && user.environment_name.indexOf('Bristle Woods Rift') > -1) {
             if (!(user.quests.QuestRiftBristleWoods.status_effects.un.indexOf('default') > -1 || user.quests.QuestRiftBristleWoods.status_effects.un.indexOf('remove') > -1) ||
                 !(user.quests.QuestRiftBristleWoods.status_effects.fr.indexOf('default') > -1 || user.quests.QuestRiftBristleWoods.status_effects.fr.indexOf('remove') > -1) ||
                 !(user.quests.QuestRiftBristleWoods.status_effects.st.indexOf('default') > -1 || user.quests.QuestRiftBristleWoods.status_effects.st.indexOf('remove') > -1))
@@ -10882,7 +10882,7 @@ function bodyJS() {
         else {
             storageValue = JSON.parse(storageValue);
             var nIndex = -1;
-            if (bAutoChangeStage && !isNullOrUndefined(user) && user.location.indexOf('Fort Rox') > -1) {
+            if (bAutoChangeStage && !isNullOrUndefined(user) && user.environment_name.indexOf('Fort Rox') > -1) {
                 if (user.quests.QuestFortRox.is_dawn === true)
                     selectFRoxStage.value = 'DAWN';
                 else if (user.quests.QuestFortRox.current_phase == 'night') {
@@ -11033,7 +11033,7 @@ function bodyJS() {
             storageValue = JSON.parse(storageValue);
             selectWWRiftFaction.value = storageValue.factionFocus;
             selectWWRiftFactionNext.value = storageValue.factionFocusNext;
-            if (bAutoChangeRageLevel && !isNullOrUndefined(user) && user.location.indexOf('Whisker Woods Rift') > -1) {
+            if (bAutoChangeRageLevel && !isNullOrUndefined(user) && user.environment_name.indexOf('Whisker Woods Rift') > -1) {
                 var arrOrder = ['CC', 'GGT', 'DL'];
                 var arrRage = new Array(3);
                 var classRage = document.getElementsByClassName('riftWhiskerWoodsHUD-zone-rageLevel');
@@ -11189,7 +11189,7 @@ function bodyJS() {
         var selectGESDCStokeEngine = document.getElementById('selectGESDCStokeEngine');
         var inputMinFuelNugget = document.getElementById('inputMinFuelNugget');
         var storageValue = window.sessionStorage.getItem('GES');
-        if (bAutoChangePhase && !isNullOrUndefined(user) && user.location.indexOf('Gnawnian Express Station') > -1) {
+        if (bAutoChangePhase && !isNullOrUndefined(user) && user.environment_name.indexOf('Gnawnian Express Station') > -1) {
             if (user.quests.QuestTrainStation.on_train) {
                 var strCurrentPhase = '';
                 var classPhase = document.getElementsByClassName('box phaseName');
