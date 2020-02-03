@@ -3,7 +3,7 @@
 
 ## To install
 1. Open tampermonkey dashboard > utilities
-2. Copy and Paste in url textbox:
+2. Copy and Paste in url textbox:<br/>
 [`https://raw.githubusercontent.com/genes3e7/mousehunt-autobot-genes-custom-edition/master/customscript.js`](https://raw.githubusercontent.com/genes3e7/mousehunt-autobot-genes-custom-edition/master/customscript.js)
 3. Press import
 
@@ -13,9 +13,7 @@
 
 ## Other details
 - Change Log: [Here](./changelog.md)
-
-- Script should be able to autoupdate.
+- Script should be able to autoupdate.<br/>
 I have already tested once from v1.0.0 to v1.0.1
-
-- Updates I will do
+- Updates I will do<br/>
 I will only update new weapons, base, charms and rift algorithm variables to include newer rift traps
