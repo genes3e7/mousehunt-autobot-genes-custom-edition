@@ -2155,8 +2155,36 @@ function BRCustom() {
         checkThenArm(null, 'trinket', objBR.trinket[nIndex]);
 }
 
+function LGAreaWorkaround(loc)
+{
+    //Workaround to get correct location data
+   try{
+    if(loc=='Living Garden')
+    {
+                       if (user.quests.QuestLivingGarden.is_normal==false)
+            return 'Cursed City'
+    }
+    if(loc=='Lost City')
+    {
+               if (user.quests.QuestLostCity.is_normal==false)
+            return 'Cursed City'
+    }
+    if(loc=='Sand Dunes')
+    {
+        if (user.quests.QuestSandDunes.is_normal==false)
+            return 'Sand Crypts'
+    }
+    return loc;
+   }
+   catch(e)
+   {
+       return loc;
+   }
+}
+
 function LGGeneral(objLG) {
     var loc = GetCurrentLocation();
+	loc=LGAreaWorkaround(loc);
     switch (loc) {
         case 'Living Garden':
             livingGarden(objLG); break;
