@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.0.10 - 220220
+Add workaround to solve bugs in LG Area<br/>
+Full credits to [MirrorCubeSquare](https://github.com/MirrorCubeSquare)
+
 ## v1.0.9 - 290120
 user.location => user.environment_name<br/>
 all location-specific scripts should now work properly<br/>
