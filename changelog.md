@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.12 - 010420
+Fix duplicates and typos in weapon pool
+Remove base included in weapons selection
 
 ## v1.0.11 - 040320
 New Bases
