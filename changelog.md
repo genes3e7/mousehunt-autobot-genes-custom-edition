@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.14 - 070420
+Added Queso Factory to law area trap option
+
 ## v1.0.13 - 070420
 - Remove the word trap from all weapons to fix trap not found bug
 - Change options for rift traps to be more clear

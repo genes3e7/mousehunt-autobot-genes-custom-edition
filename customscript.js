@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.13
+// @version    	1.0.14
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -5856,6 +5856,7 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="The Law Draw">The Law Draw</option>';
             preferenceHTMLStr += '<option value="Law Laser">Law Laser</option>';
             preferenceHTMLStr += '<option value="Christmas Cactus">Christmas Cactus</option>';
+            preferenceHTMLStr += '<option value="Queso Factory">Queso Factory</option>';
             preferenceHTMLStr += '<option value="Meteor Prison Core">Meteor Prison Core</option>';
             preferenceHTMLStr += '<option value="Ember Prison Core">Ember Prison Core</option>';
             preferenceHTMLStr += '</select>';
