@@ -1,4 +1,9 @@
 # Change Log
+## v1.0.13 - 070420
+- Remove the word trap from all weapons to fix trap not found bug
+- Change options for rift traps to be more clear
+- Remove the word trap from rift and law areas trap selection
+
 ## v1.0.12 - 010420
 Fix duplicates and typos in weapon pool
 Remove base included in weapons selection
