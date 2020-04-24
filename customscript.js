@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.14
+// @version    	1.0.15
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -372,8 +372,8 @@ var kingTimeElement;
 var lastKingRewardSumTimeElement;
 var optionElement;
 var travelElement;
-var strHornButton = 'hornbutton';
-var strCampButton = 'campbutton';
+var strHornButton = 'mousehuntHud-huntersHorn-container';
+var strCampButton = 'mousehuntHud-campButton';
 var isNewUI = false;
 var debugKR = false;
 
@@ -7759,11 +7759,12 @@ function soundHorn() {
         fireEvent(document.getElementsByClassName(strHornButton)[0].firstChild, 'click');
 
         // double check if the horn was already sounded
-        window.setTimeout(function () { afterSoundingHorn(); }, 3000);
+        window.setTimeout(function () { afterSoundingHorn(); }, 5000);
     }
 }
 
 function afterSoundingHorn(bLog) {
+    document.getElementByClassName("mousehuntHud-huntersHorn").click();
     var scriptNode = document.getElementById("scriptNode");
     if (scriptNode) {
         scriptNode.setAttribute("soundedHornAtt", "false");
@@ -7883,16 +7884,14 @@ function embedScript() {
     if (!isNullOrUndefined(testNewUI)) {
         // old UI
         isNewUI = false;
-        strHornButton = 'hornbutton';
-        strCampButton = 'campbutton';
+        strCampButton = 'mousehuntHud-campButton';
     }
     else {
         // new UI
         isNewUI = true;
-        strHornButton = 'mousehuntHud-huntersHorn-container';
-        strCampButton = 'camp';
+        strCampButton = 'mousehuntHud-menu-item';
         //alert("New UI might not work properly with this script. Use at your own risk");
-        document.getElementById('titleElement').innerHTML += " - <font color='red'><b>Pls use Classic UI (i.e. Non-FreshCoat Layout) for fully working features</b></font>";
+        //document.getElementById('titleElement').innerHTML += " - <font color='red'><b>Pls use Classic UI (i.e. Non-FreshCoat Layout) for fully working features</b></font>";
     }
     setStorage('NewUI', isNewUI);
 

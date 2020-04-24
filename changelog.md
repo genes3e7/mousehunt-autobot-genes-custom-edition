@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.15 - 240420
+Fix Horn Function - Temporary buggy solution
+
 ## v1.0.14 - 070420
 Added Queso Factory to law area trap option
 
