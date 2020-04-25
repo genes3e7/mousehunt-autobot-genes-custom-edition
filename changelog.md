@@ -1,4 +1,8 @@
 # Change Log
+## v1.0.16 - 260420
+Fix Horn Function - Should be fully functional now.
+Fix timer display - Fits mousehunt UI overlay
+
 ## v1.0.15 - 240420
 Fix Horn Function - Temporary buggy solution
 

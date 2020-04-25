@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.15
+// @version    	1.0.16
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -4914,7 +4914,7 @@ function embedTimer(targetPage) {
     if (showTimerInPage) {
         var headerElement;
         if (fbPlatform || hiFivePlatform || mhPlatform)
-            headerElement = document.getElementById('noscript');
+            headerElement = document.getElementById('overlayContainer');
         else if (mhMobilePlatform)
             headerElement = document.getElementById('mobileHorn');
 
@@ -7656,9 +7656,9 @@ function soundHorn() {
         var headerElement = (isNewUI) ? document.getElementById('mousehuntHud').firstChild : document.getElementById('header');
         if (headerElement) {
             // need to make sure that the horn image is ready before we can click on it
-            var headerStatus = headerElement.getAttribute('class');
-            headerStatus = headerStatus.toLowerCase();
-            if (headerStatus.indexOf("hornready") != -1) {
+            var headerStatus = headerElement.getAttribute('class').toLowerCase();
+
+            if (document.getElementsByClassName('mousehuntHud-hornTimer')[0].innerText == "Ready!") {
                 // found the horn image, let's sound the horn!
 
                 // update timer
@@ -7759,12 +7759,11 @@ function soundHorn() {
         fireEvent(document.getElementsByClassName(strHornButton)[0].firstChild, 'click');
 
         // double check if the horn was already sounded
-        window.setTimeout(function () { afterSoundingHorn(); }, 5000);
+        window.setTimeout(function () { afterSoundingHorn(); }, 3000);
     }
 }
 
 function afterSoundingHorn(bLog) {
-    document.getElementByClassName("mousehuntHud-huntersHorn").click();
     var scriptNode = document.getElementById("scriptNode");
     if (scriptNode) {
         scriptNode.setAttribute("soundedHornAtt", "false");
