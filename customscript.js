@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.16
+// @version    	1.0.17
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -148,7 +148,7 @@ var objBestTrap = {
         arcane: ['New Horizon', 'Event Horizon', 'Grand Arcanum', 'Chrome Arcane Capturing Rod', 'Arcane Blast', 'Arcane Capturing Rod Of Never Yielding Mystery'],
         draconic: ['Dragon Lance', 'Harrowing Holiday Harpoon Harp', 'Ice Maiden'],
         forgotten: ['Infinite Labyrinth', 'Endless Labyrinth', 'Crystal Crucible', 'Stale Cupcake Golem', 'Tarannosaurus Rex', 'Crystal Mineral Crusher', 'The Forgotten Art of Dance'],
-        hydro: ['School of Sharks', 'Rune Shark', 'Chrome Phantasmic Oasis', 'Phantasmic Oasis', 'Oasis Water Node', 'Haunted Shipwreck', 'Steam Laser Mk. III', 'Steam Laser Mk. II', 'Steam Laser Mk. I', 'Ancient Spear Gun'],
+        hydro: ['School of Sharks', 'Rune Shark', 'Queso Fount', 'Chrome Phantasmic Oasis', 'Phantasmic Oasis', 'Oasis Water Node', 'Haunted Shipwreck', 'Steam Laser Mk. III', 'Steam Laser Mk. II', 'Steam Laser Mk. I', 'Ancient Spear Gun'],
         law: ['Meteor Prison Core', 'The Law Draw', 'Christmas Cactus', 'Law Laser', 'Engine Doubler', 'Bandit Deflector', 'Supply Grabber', 'S.L.A.C. II', 'S.L.A.C.'],
         physical: ['Chrome MonstroBot', 'Sandstorm MonstroBot', 'Sandtail Sentinel', 'Enraged RhinoBot'],
         rift: ['Mysteriously unYielding', 'Multi-Crystal Laser', 'Focused Crystal Laser', 'Christmas Crystalabra', 'Biomolecular Re-atomizer', 'Crystal Tower'],
@@ -156,7 +156,7 @@ var objBestTrap = {
         tactical: ['Chrome Sphynx Wrath', 'Sphynx Wrath', 'Zugzwang\'s Ultimate Move', 'Zugzwang\'s First Move']
     },
     base: {
-        luck: ['Minotaur Base', 'Fissure Base', 'Rift Base', 'Attuned Enerchi Induction Base', 'Monkey Jade Base', 'Sheep Jade Base', 'Depth Charge Base', 'Horse Jade Base', 'Snake Jade Base', 'Dragon Jade Base', 'Eerier Base', 'Papyrus Base'],
+        luck: ['Prestige Base', 'Minotaur Base', 'Fissure Base', 'Rift Base', 'Attuned Enerchi Induction Base', 'Monkey Jade Base', 'Sheep Jade Base', 'Depth Charge Base', 'Horse Jade Base', 'Snake Jade Base', 'Dragon Jade Base', 'Eerier Base', 'Papyrus Base'],
         power: ['Minotaur Base', 'Tidal Base', 'Golden Tournament Base', 'Spellbook Base']
     }
 };
@@ -223,7 +223,7 @@ var objSCZone = {
     ZONE_BONUS: 9,
     ZONE_DANGER_PP_LOTA: 10
 };
-var bestSCBase = ['Minotaur Base', 'Fissure Base', 'Depth Charge Base'];
+var bestSCBase = ['Prestige Base', 'Minotaur Base', 'Fissure Base', 'Depth Charge Base'];
 
 // // Spring Egg Hunt
 var chargeCharm = ['Eggstra Charge', 'Eggscavator'];
@@ -2439,8 +2439,8 @@ function SunkenCity(isAggro) {
     var zone = document.getElementsByClassName('zoneName')[0].innerText;
     console.plog('Current Zone:', zone);
     var currentZone = GetSunkenCityZone(zone);
-    checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
     if (currentZone == objSCZone.ZONE_NOT_DIVE) {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm('best', 'base', objBestTrap.base.luck);
         checkThenArm(null, 'trinket', 'Oxygen Burst');
         checkThenArm('best', 'bait', ['Fishy Fromage', 'Gouda']);
@@ -2455,6 +2455,7 @@ function SunkenCity(isAggro) {
     var isEACArmed = (charmArmed.indexOf('Empowered Anchor') > -1);
     var isWJCArmed = (charmArmed.indexOf('Water Jet') > -1);
     if (currentZone == objSCZone.ZONE_OXYGEN || currentZone == objSCZone.ZONE_TREASURE || currentZone == objSCZone.ZONE_BONUS) {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         if (isAggro && (currentZone == objSCZone.ZONE_TREASURE))
             checkThenArm('best', 'trinket', ['Golden Anchor', 'Empowered Anchor']);
         else {
@@ -2468,6 +2469,7 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'SUPER');
     }
     else if (currentZone == objSCZone.ZONE_DANGER_PP || currentZone == objSCZone.ZONE_DANGER_PP_LOTA) {
+        checkThenArm('best', 'weapon', ['Queso Fount', objBestTrap.weapon.hydro]);
         if (!isAggro) {
             // arm Empowered Anchor Charm
             if (!isEACArmed && !isAggro) {
@@ -2480,6 +2482,7 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'Gouda');
     }
     else if ((currentZone == objSCZone.ZONE_DEFAULT) && isAggro) {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         var depth = parseInt(getPageVariable('user.quests.QuestSunkenCity.zones[1].length'));
         if (depth >= 500) {
             var nextZoneName = getPageVariable('user.quests.QuestSunkenCity.zones[2].name');
@@ -2500,6 +2503,7 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'Gouda');
     }
     else {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         DisarmSCSpecialCharm(charmArmed);
         checkThenArm(null, 'bait', 'Gouda');
     }
