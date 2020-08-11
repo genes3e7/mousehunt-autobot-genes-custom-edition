@@ -2439,8 +2439,8 @@ function SunkenCity(isAggro) {
     var zone = document.getElementsByClassName('zoneName')[0].innerText;
     console.plog('Current Zone:', zone);
     var currentZone = GetSunkenCityZone(zone);
+    checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
     if (currentZone == objSCZone.ZONE_NOT_DIVE) {
-        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm('best', 'base', objBestTrap.base.luck);
         checkThenArm(null, 'trinket', 'Oxygen Burst');
         checkThenArm('best', 'bait', ['Fishy Fromage', 'Gouda']);
@@ -2455,7 +2455,6 @@ function SunkenCity(isAggro) {
     var isEACArmed = (charmArmed.indexOf('Empowered Anchor') > -1);
     var isWJCArmed = (charmArmed.indexOf('Water Jet') > -1);
     if (currentZone == objSCZone.ZONE_OXYGEN || currentZone == objSCZone.ZONE_TREASURE || currentZone == objSCZone.ZONE_BONUS) {
-        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         if (isAggro && (currentZone == objSCZone.ZONE_TREASURE))
             checkThenArm('best', 'trinket', ['Golden Anchor', 'Empowered Anchor']);
         else {
@@ -2469,7 +2468,6 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'SUPER');
     }
     else if (currentZone == objSCZone.ZONE_DANGER_PP || currentZone == objSCZone.ZONE_DANGER_PP_LOTA) {
-        checkThenArm('best', 'weapon', ['Queso Fount', objBestTrap.weapon.hydro]);
         if (!isAggro) {
             // arm Empowered Anchor Charm
             if (!isEACArmed && !isAggro) {
@@ -2482,7 +2480,6 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'Gouda');
     }
     else if ((currentZone == objSCZone.ZONE_DEFAULT) && isAggro) {
-        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         var depth = parseInt(getPageVariable('user.quests.QuestSunkenCity.zones[1].length'));
         if (depth >= 500) {
             var nextZoneName = getPageVariable('user.quests.QuestSunkenCity.zones[2].name');
@@ -2503,7 +2500,6 @@ function SunkenCity(isAggro) {
         checkThenArm(null, 'bait', 'Gouda');
     }
     else {
-        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         DisarmSCSpecialCharm(charmArmed);
         checkThenArm(null, 'bait', 'Gouda');
     }
@@ -2722,8 +2718,9 @@ function SCCustom() {
     var objSCCustom = getStorageToObject('SCCustom', objDefaultSCCustom);
     var zone = document.getElementsByClassName('zoneName')[0].innerText;
     var zoneID = GetSunkenCityZone(zone);
-    checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
+    //checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
     if (zoneID == objSCZone.ZONE_NOT_DIVE) {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm(null, 'trinket', objSCCustom.trinket[zoneID]);
         checkThenArm('best', 'bait', ['Fishy Fromage', 'Brie Cheese', 'Gouda Cheese']);                                                 //Take Away once done.
         if (getPageVariable("user." + 'bait' + "_name") == 'Fishy Fromage')                                                             //Take Away once done.
@@ -2735,17 +2732,19 @@ function SCCustom() {
         return;
     }
     else if ((zoneID == objSCZone.ZONE_DEFAULT) || (zoneID == objSCZone.ZONE_OXYGEN) ||
-        (zone == 'Sand Dollar Sea Bar') || (zone == 'Coral Reef') || (zone == 'School of Mice') || (zone == 'Rocky Outcrop')) {     //Take Away once done.
+        (zone == 'Sand Dollar Sea Bar') || (zone == 'Coral Reef') || (zone == 'School of Mice') || (zone == 'Rocky Outcrop')) {          //Take Away once done.
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base']);                                        //Take Away once done.
     }
-    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA)                                                                                    //Take Away once done.
+    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA || zoneID == objSCZone.ZONE_DANGER_PP)                                              //Take Away once done.
+        checkThenArm('best', 'weapon', ['Queso Fount', objBestTrap.weapon.hydro]);
         if (getPageVariable("user." + 'trinket' + "_name") == 'Ultimate Anchor Charm') {                                                 //Take Away once done.
             checkThenArm(null, 'bait', 'SUPER|brie+');                                                                                   //Take Away once done.
-            checkThenArm('best', 'base', ['Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
+            checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
         }                                                                                                                                //Take Away once done.
-        else {                                                                                                                               //Take Away once done.
-            checkThenArm('best', 'base', ['Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
-        }                                                                                                                                    //Take Away once done.
+        else {                                                                                                                           //Take Away once done.
+            checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
+        }                                                                                                                                //Take Away once done.
 
     var distance = parseInt(getPageVariable('user.quests.QuestSunkenCity.distance'));
     console.plog('Current Zone:', zone, 'ID', zoneID, 'at meter', distance);
