@@ -2736,7 +2736,7 @@ function SCCustom() {
         checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base']);                                        //Take Away once done.
     }
-    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA || zoneID == objSCZone.ZONE_DANGER_PP)                                              //Take Away once done.
+    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA || zoneID == objSCZone.ZONE_DANGER_PP){                                              //Take Away once done.
         checkThenArm('best', 'weapon', ['Queso Fount', objBestTrap.weapon.hydro]);
         if (getPageVariable("user." + 'trinket' + "_name") == 'Ultimate Anchor Charm') {                                                 //Take Away once done.
             checkThenArm(null, 'bait', 'SUPER|brie+');                                                                                   //Take Away once done.
@@ -2745,7 +2745,8 @@ function SCCustom() {
         else {                                                                                                                           //Take Away once done.
             checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
         }                                                                                                                                //Take Away once done.
-
+    }
+    
     var distance = parseInt(getPageVariable('user.quests.QuestSunkenCity.distance'));
     console.plog('Current Zone:', zone, 'ID', zoneID, 'at meter', distance);
     checkThenArm('best', 'base', bestSCBase);
