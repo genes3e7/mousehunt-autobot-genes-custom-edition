@@ -1,4 +1,9 @@
 # Change Log
+## v1.0.17 - 040820
+Changed Sunken City Custom Algorithm to include Queso Fount Trap and Prestige Base.
+- Danger zones will use Queso Fount Trap in place of School of Sharks or Rune Shark Trap.
+- Prestige Base will be armed first before Minotaur Base.
+
 ## v1.0.16 - 260420
 Fix Horn Function - Should be fully functional now.
 Fix timer display - Fits mousehunt UI overlay

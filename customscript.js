@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.16
+// @version    	1.0.17
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -148,7 +148,7 @@ var objBestTrap = {
         arcane: ['New Horizon', 'Event Horizon', 'Grand Arcanum', 'Chrome Arcane Capturing Rod', 'Arcane Blast', 'Arcane Capturing Rod Of Never Yielding Mystery'],
         draconic: ['Dragon Lance', 'Harrowing Holiday Harpoon Harp', 'Ice Maiden'],
         forgotten: ['Infinite Labyrinth', 'Endless Labyrinth', 'Crystal Crucible', 'Stale Cupcake Golem', 'Tarannosaurus Rex', 'Crystal Mineral Crusher', 'The Forgotten Art of Dance'],
-        hydro: ['School of Sharks', 'Rune Shark', 'Chrome Phantasmic Oasis', 'Phantasmic Oasis', 'Oasis Water Node', 'Haunted Shipwreck', 'Steam Laser Mk. III', 'Steam Laser Mk. II', 'Steam Laser Mk. I', 'Ancient Spear Gun'],
+        hydro: ['School of Sharks', 'Rune Shark', 'Queso Fount', 'Chrome Phantasmic Oasis', 'Phantasmic Oasis', 'Oasis Water Node', 'Haunted Shipwreck', 'Steam Laser Mk. III', 'Steam Laser Mk. II', 'Steam Laser Mk. I', 'Ancient Spear Gun'],
         law: ['Meteor Prison Core', 'The Law Draw', 'Christmas Cactus', 'Law Laser', 'Engine Doubler', 'Bandit Deflector', 'Supply Grabber', 'S.L.A.C. II', 'S.L.A.C.'],
         physical: ['Chrome MonstroBot', 'Sandstorm MonstroBot', 'Sandtail Sentinel', 'Enraged RhinoBot'],
         rift: ['Mysteriously unYielding', 'Multi-Crystal Laser', 'Focused Crystal Laser', 'Christmas Crystalabra', 'Biomolecular Re-atomizer', 'Crystal Tower'],
@@ -156,7 +156,7 @@ var objBestTrap = {
         tactical: ['Chrome Sphynx Wrath', 'Sphynx Wrath', 'Zugzwang\'s Ultimate Move', 'Zugzwang\'s First Move']
     },
     base: {
-        luck: ['Minotaur Base', 'Fissure Base', 'Rift Base', 'Attuned Enerchi Induction Base', 'Monkey Jade Base', 'Sheep Jade Base', 'Depth Charge Base', 'Horse Jade Base', 'Snake Jade Base', 'Dragon Jade Base', 'Eerier Base', 'Papyrus Base'],
+        luck: ['Prestige Base', 'Minotaur Base', 'Fissure Base', 'Rift Base', 'Attuned Enerchi Induction Base', 'Monkey Jade Base', 'Sheep Jade Base', 'Depth Charge Base', 'Horse Jade Base', 'Snake Jade Base', 'Dragon Jade Base', 'Eerier Base', 'Papyrus Base'],
         power: ['Minotaur Base', 'Tidal Base', 'Golden Tournament Base', 'Spellbook Base']
     }
 };
@@ -223,7 +223,7 @@ var objSCZone = {
     ZONE_BONUS: 9,
     ZONE_DANGER_PP_LOTA: 10
 };
-var bestSCBase = ['Minotaur Base', 'Fissure Base', 'Depth Charge Base'];
+var bestSCBase = ['Prestige Base', 'Minotaur Base', 'Fissure Base', 'Depth Charge Base'];
 
 // // Spring Egg Hunt
 var chargeCharm = ['Eggstra Charge', 'Eggscavator'];
@@ -2718,8 +2718,9 @@ function SCCustom() {
     var objSCCustom = getStorageToObject('SCCustom', objDefaultSCCustom);
     var zone = document.getElementsByClassName('zoneName')[0].innerText;
     var zoneID = GetSunkenCityZone(zone);
-    checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
+    //checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
     if (zoneID == objSCZone.ZONE_NOT_DIVE) {
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm(null, 'trinket', objSCCustom.trinket[zoneID]);
         checkThenArm('best', 'bait', ['Fishy Fromage', 'Brie Cheese', 'Gouda Cheese']);                                                 //Take Away once done.
         if (getPageVariable("user." + 'bait' + "_name") == 'Fishy Fromage')                                                             //Take Away once done.
@@ -2731,18 +2732,21 @@ function SCCustom() {
         return;
     }
     else if ((zoneID == objSCZone.ZONE_DEFAULT) || (zoneID == objSCZone.ZONE_OXYGEN) ||
-        (zone == 'Sand Dollar Sea Bar') || (zone == 'Coral Reef') || (zone == 'School of Mice') || (zone == 'Rocky Outcrop')) {     //Take Away once done.
+        (zone == 'Sand Dollar Sea Bar') || (zone == 'Coral Reef') || (zone == 'School of Mice') || (zone == 'Rocky Outcrop')) {          //Take Away once done.
+        checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);
         checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base']);                                        //Take Away once done.
     }
-    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA)                                                                                    //Take Away once done.
+    else if (zoneID == objSCZone.ZONE_DANGER_PP_LOTA || zoneID == objSCZone.ZONE_DANGER_PP){                                              //Take Away once done.
+        checkThenArm('best', 'weapon', ['Queso Fount', objBestTrap.weapon.hydro]);
         if (getPageVariable("user." + 'trinket' + "_name") == 'Ultimate Anchor Charm') {                                                 //Take Away once done.
             checkThenArm(null, 'bait', 'SUPER|brie+');                                                                                   //Take Away once done.
-            checkThenArm('best', 'base', ['Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
+            checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
         }                                                                                                                                //Take Away once done.
-        else {                                                                                                                               //Take Away once done.
-            checkThenArm('best', 'base', ['Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
-        }                                                                                                                                    //Take Away once done.
-
+        else {                                                                                                                           //Take Away once done.
+            checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
+        }                                                                                                                                //Take Away once done.
+    }
+    
     var distance = parseInt(getPageVariable('user.quests.QuestSunkenCity.distance'));
     console.plog('Current Zone:', zone, 'ID', zoneID, 'at meter', distance);
     checkThenArm('best', 'base', bestSCBase);
