@@ -1,4 +1,25 @@
 # Change Log
+## v1.0.18 - 190820
+New Bases
+```diff
++ Signature Series Denture Base
+```
+New Weapons
+```diff
++ Carousel Charger
++ Chrome Celestial Dissonance
+```
+New Charms
+```diff
++ Rift Chrome Charm
++ Rift Tarnished Charm
+```
+All rift option algorithm weapon added
+```diff
++ Chrome Celestial Dissonance
+```
+Tweaking Sunken City Custom Algorithm
+
 ## v1.0.17 - 040820
 Changed Sunken City Custom Algorithm to include Queso Fount Trap and Prestige Base.
 - Danger zones will use Queso Fount Trap in place of School of Sharks or Rune Shark Trap.
