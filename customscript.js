@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.18
+// @version    	1.0.19
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -2724,7 +2724,7 @@ function SCCustom() {
         checkThenArm(null, 'trinket', objSCCustom.trinket[zoneID]);
         checkThenArm('best', 'bait', ['Fishy Fromage', 'Brie Cheese', 'Gouda Cheese']);                                                 //Take Away once done.
         if (getPageVariable("user." + 'bait' + "_name") == 'Fishy Fromage')                                                             //Take Away once done.
-            checkThenArm('best', 'base', ['Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
+            checkThenArm('best', 'base', ['Prestige Base', 'Minotaur Base', 'Clockwork Base', 'Fissure Base', 'Overgrown Ember Stone Base', 'Rift Base', 'Dog Jade Base', '10 Layer Birthday Cake Base']); //Take Away once done.
         else                                                                                                                            //Take Away once done.
             checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base']);                                   //Take Away once done.
 
@@ -2746,12 +2746,11 @@ function SCCustom() {
         checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base', 'Minotaur Base']);                       //Take Away once done.
     }else{
         checkThenArm('best', 'weapon', objBestTrap.weapon.hydro);                                                                        //Take Away once done.
-        checkThenArm('best', 'base', ['Overgrown Ember Stone Base', 'Festive Winter Hunt Base', 'Minotaur Base']);                       //Take Away once done.
+        checkThenArm('best', 'base', bestSCBase);
     }
     
     var distance = parseInt(getPageVariable('user.quests.QuestSunkenCity.distance'));
     console.plog('Current Zone:', zone, 'ID', zoneID, 'at meter', distance);
-    checkThenArm('best', 'base', bestSCBase);
     var canJet = false;
     if (!objSCCustom.isHunt[zoneID]) {
         var distanceToNextZone = [];

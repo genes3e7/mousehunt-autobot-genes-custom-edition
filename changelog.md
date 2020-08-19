@@ -1,4 +1,7 @@
 # Change Log
+## V1.0.19 - 200820
+Fix logic for sunken city custom to stop swapping base every hunt.
+
 ## v1.0.18 - 190820
 New Bases
 ```diff
