@@ -1,5 +1,27 @@
 # Change Log
-## V1.0.19 - 200820
+## v1.0.20 - 120920
+New Bases
+```diff
++ Adorned Empyrean Refractor Base
+```
+New Weapons
+```diff
++ Circlet of Pursuing
++ Circlet of Seeking
++ Thought Manipulator
++ Thought Obliterator
++ S.T.I.N.G.
++ S.T.I.N.G.E.R.
++ Sleeping Stone
++ Slumbering Boulder
+```
+New Bait
+```diff
++ Cloud Cheesecake
++ Sky Pirate Swiss Cheese
+```
+
+## v1.0.19 - 200820
 Fix logic for sunken city custom to stop swapping base every hunt.
 
 ## v1.0.18 - 190820
