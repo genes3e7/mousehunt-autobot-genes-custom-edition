@@ -1,4 +1,14 @@
 # Change Log
+## v1.0.21 - 241020
+New Bases
+```diff
++ Condemned Base
+```
+New Weapons
+```diff
++ The Haunted Manor
+```
+
 ## v1.0.20 - 120920
 New Bases
 ```diff
