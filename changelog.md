@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.22 - 061120
+Added `camp.php` to valid urls
+
 ## v1.0.21 - 241020
 New Bases
 ```diff

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.21
+// @version    	1.0.22
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -679,6 +679,7 @@ function exeScript() {
             window.location.href == "https://www.mousehuntgame.com/#" ||
             window.location.href == "https://www.mousehuntgame.com/?switch_to=standard" ||
             window.location.href.indexOf("mousehuntgame.com/turn.php") != -1 ||
+            window.location.href.indexOf("mousehuntgame.com/camp.php") != -1 ||
             window.location.href.indexOf("mousehuntgame.com/?newpuzzle") != -1 ||
             window.location.href.indexOf("mousehuntgame.com/index.php") != -1) {
             // page to execute the script!
