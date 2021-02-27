@@ -4940,8 +4940,14 @@ function embedTimer(targetPage) {
                 titleElement.innerHTML = "<a href=\"https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Genes Custom Edition)</b></a> - <font color='red'><b>Pls use Chrome browser for fully working features</b></font>";
             else
                 titleElement.innerHTML = "<a href=\"https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition\" target=\"_blank\"><b>MouseHunt AutoBot (version " + g_strVersion + " Genes Custom Edition)</b></a>";
+
             timerDivElement.appendChild(titleElement);
             titleElement = null;
+            
+            var sponsorLine = document.createElement('div');
+            sponsorLine.setAttribute('id', 'sponsorLine');
+            sponsorLine.innerHTML = '<a href="https://github.com/sponsors/genes3e7" target=\"_blank\">Consider sponsoring this project</a>';
+            timerDivElement.appendChild(sponsorLine);
 
             if (targetPage) {
                 nextHornTimeElement = document.createElement('div');
