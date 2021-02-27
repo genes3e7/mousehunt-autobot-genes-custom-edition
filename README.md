@@ -13,7 +13,10 @@
 
 ## Other details
 - Change Log: [Here](./changelog.md)
-- Script should be able to autoupdate.  
-I have already tested once from v1.0.0 to v1.0.1
+- Script should be able to autoupdate.
 - Updates I will do  
 I will only update new weapons, base, charms and rift algorithm variables to include newer rift traps
+
+## Donation
+- Consider treating me a cup of coffee if you like what I am doing.  
+  - Donation links at the sponsor this project section
