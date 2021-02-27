@@ -1,4 +1,21 @@
 # Change Log
+## v1.0.23 - 270221
+New Bases
+```diff
++ 2021 New Year's Base
++ Elixir Exchanger Base
++ Gift of the Day Base
+```
+New Weapons
+```diff
++ S.S. Scoundrel Sleigher
+```
+New Charms
+```diff
++ 2021 Charm
++ Rift 2021 Charm
+```
+
 ## v1.0.22 - 061120
 Added `camp.php` to valid urls
 
