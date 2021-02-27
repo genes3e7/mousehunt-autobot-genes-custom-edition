@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.23
+// @version    	1.0.24
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -8162,8 +8162,9 @@ function CallKRSolver() {
     }
     else {
         if (isNewUI) {
-            img = document.getElementsByClassName('mousehuntPage-puzzle-form-captcha-image')[0];
-            frame.src = img.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            // img = document.getElementsByClassName('mousehuntPage-puzzle-form-captcha-image')[0];
+            // frame.src = img.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            frame.src = document.getElementsByClassName('mousehuntPage-puzzle-form-captcha-image')[0].getElementsByTagName('img')[0].src;
         }
         else {
             img = document.getElementById('puzzleImage');

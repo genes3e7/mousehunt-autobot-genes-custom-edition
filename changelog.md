@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.24 - 270221
+Fixed King's Reward image detection logic
+
 ## v1.0.23 - 270221
 New Bases
 ```diff
