@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.25 - 010321
+Added `S.T.I.N.G.` and `S.T.I.N.G.E.R` to law area trap options
+
 ## v1.0.24 - 270221
 Fixed King's Reward image detection logic
 

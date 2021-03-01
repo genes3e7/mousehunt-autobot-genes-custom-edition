@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.24
+// @version    	1.0.25
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
@@ -5873,6 +5873,8 @@ function embedTimer(targetPage) {
             preferenceHTMLStr += '<option value="Queso Factory">Queso Factory</option>';
             preferenceHTMLStr += '<option value="Meteor Prison Core">Meteor Prison Core</option>';
             preferenceHTMLStr += '<option value="Ember Prison Core">Ember Prison Core</option>';
+            preferenceHTMLStr += '<option value="S.T.I.N.G.">S.T.I.N.G.</option>';
+            preferenceHTMLStr += '<option value="S.T.I.N.G.E.R.">S.T.I.N.G.E.R.</option>';
             preferenceHTMLStr += '</select>';
             preferenceHTMLStr += '<select id="selectGESTrapBase" style="width: 75px" onchange="saveGES();">';
             preferenceHTMLStr += '</select>';
