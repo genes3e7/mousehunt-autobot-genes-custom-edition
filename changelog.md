@@ -1,4 +1,15 @@
 # Change Log
+## v1.0.26 - 030321
+New Bases
+```diff
++ Birthday Ube Cake Base
++ Ox Jade Base
+```
+New Bait
+```diff
++ Speedy Coggy Colby
+```
+
 ## v1.0.25 - 010321
 Added `S.T.I.N.G.` and `S.T.I.N.G.E.R` to law area trap options
 
