@@ -1,9 +1,12 @@
 // ==UserScript==
 // @name        MouseHunt AutoBot Enhanced Edition Custom Edition
 // @author      Genes
-// @version    	1.0.26
+// @version    	1.0.27
 // @namespace   https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition
 // @description custom script based off mousehunt autobot enhanced edition 1.37.9
+// @updateURL   https://raw.githubusercontent.com/genes3e7/mousehunt-autobot-genes-custom-edition/master/customscript.js
+// @downloadURL https://raw.githubusercontent.com/genes3e7/mousehunt-autobot-genes-custom-edition/master/customscript.js
+// @supportURL  https://github.com/genes3e7/mousehunt-autobot-genes-custom-edition/issues
 // @require		https://code.jquery.com/jquery-2.2.2.min.js
 // @include		http://mousehuntgame.com/*
 // @include		https://mousehuntgame.com/*

@@ -13,7 +13,11 @@
 
 ## Other details
 - Change Log: [Here](./changelog.md)
-- Script should be able to autoupdate.
+- Script should be able to auto-update.
+- If script is unable to auto-update, try the following
+  - Go to the tampermonkey dashbaord and click on the script.
+  - Under the settings tab, look for check for updates.  
+  Ensure it has been checked and the same url used for installation is inside.
 - Updates I will do  
 I will only update new weapons, base, charms and rift algorithm variables to include newer rift traps
 

@@ -1,4 +1,7 @@
 # Change Log
+## v1.0.27 - 030321
+Configuration updates to ensure script can auto-update
+
 ## v1.0.26 - 030321
 New Bases
 ```diff
