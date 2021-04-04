@@ -1,4 +1,14 @@
 # Change Log
+## v1.0.28 - 040421
+New Bases
+```diff
++ Chocolate Bar Base
+```
+New Weapons
+```diff
++ Darkest Chocolate Bunny
+```
+
 ## v1.0.27 - 030321
 Configuration updates to ensure script can auto-update
 
