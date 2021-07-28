@@ -1,4 +1,15 @@
 # Change Log
+## v1.0.29 - 280721
+New Bases
+```diff
++ Iceberg Boiler Base
+```
+New Weapons
+```diff
++ Chrome School of Sharks
++ Cloaking Droid
+```
+
 ## v1.0.28 - 040421
 New Bases
 ```diff
