@@ -2,8 +2,8 @@
 ## v1.0.30 - 230122
 New Bases
 ```diff
-+ 2022 New Year\'s Base
-+ Alchemist\'s Cookbook Base
++ 2022 New Year's Base
++ Alchemist's Cookbook Base
 + All Season Express Track Base
 + Compass Magnet Base
 + Forecaster Base
