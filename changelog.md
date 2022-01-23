@@ -1,4 +1,38 @@
 # Change Log
+## v1.0.30 - 230122
+New Bases
+```diff
++ 2022 New Year\'s Base
++ Alchemist\'s Cookbook Base
++ All Season Express Track Base
++ Compass Magnet Base
++ Forecaster Base
++ Gemology Base
++ Rift Mist Diffuser Base
++ Seasonal Gift of the Day Base
++ Thief Base
+```
+New Weapons
+```diff
++ Boiling Cauldron
++ The Holiday Express Trap
+```
+New Bait
+```diff
++ Bonefort Cheese
++ Monterey Jack-O-Lantern
++ Polter-Geitost
++ Scream Cheese
+```
+New Charms
+```diff
++ 2022 Charm
++ Brilliant Water Jet Charm
++ Gloomy Gathering Charm
++ Rift 2022 Charm
++ Ultimate Dragonbane Charm
+```
+
 ## v1.0.29 - 280721
 New Bases
 ```diff
